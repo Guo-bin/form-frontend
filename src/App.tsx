@@ -34,7 +34,7 @@ interface EduArticle {
 }
 
 export default function App() {
-  const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+  const API_BASE = (import.meta.env.VITE_API_URL || 'https://form-server-ysnw.onrender.com').replace(/\/$/, '');
 
   const [currentTab, setCurrentTab] = useState<'forms' | 'timeline' | 'education'>('forms');
   const [formsList, setFormsList] = useState<FormTemplate[]>([]);
