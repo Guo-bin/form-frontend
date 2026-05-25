@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 min-h-screen antialiased;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans TC', system-ui, sans-serif;
+  }
+}
+
+/* Glassmorphism/Card Utilities */
+.glass-panel {
+  @apply bg-white border border-slate-200 shadow-sm rounded-2xl p-6;
+}
+
+.glass-calculator {
+  @apply bg-white/95 border border-teal-500/30 shadow-xl rounded-2xl p-5;
+  backdrop-filter: blur(8px);
+}
+
+.chart-bars-container {
+  display: flex;
+  align-items: flex-end;
+  height: 120px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 4px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s ease-out forwards;
+}
